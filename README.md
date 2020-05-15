@@ -32,3 +32,7 @@
 - [ ] 物品美術
 - [ ] 場景美術
 - [ ] 失敗動畫
+
+## Clone 參考
+* [參考1](https://github.com/github-for-unity/Unity/blob/master/docs/contributing/how-to-build.md)
+* [參考2](https://stackoverflow.com/questions/23328557/how-to-get-a-project-from-github-to-unity)
