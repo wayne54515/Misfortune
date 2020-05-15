@@ -53,4 +53,11 @@ public class PlayerAction : MonoBehaviour
     {
         isGrounded = true;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Game Over
+        if (collision.gameObject.tag == "Obstacle")
+            speed = 0f;
+    }
 }
