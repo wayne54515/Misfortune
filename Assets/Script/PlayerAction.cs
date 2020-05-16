@@ -58,6 +58,9 @@ public class PlayerAction : MonoBehaviour
     {
         //Game Over
         if (collision.gameObject.tag == "Obstacle")
+        {
             speed = 0f;
+        }
+            
     }
 }
