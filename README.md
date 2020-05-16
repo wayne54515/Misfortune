@@ -4,7 +4,7 @@
 1. 地板 [name=Wayne]
 2. 天空 [name=]
 3. UI [name=]
-4. 美術、動畫 [name=]
+4. 美術、動畫 [name=jing]
 
 ### 地板
 - [x] 玩家移動
