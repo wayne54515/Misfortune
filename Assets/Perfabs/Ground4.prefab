@@ -210,13 +210,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609754592659569}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 1.75, y: 0, z: 1.15}
-  m_LocalScale: {x: 1.5, y: 10, z: 0.3}
+  m_LocalScale: {x: 10, y: 0.8, z: 0.3}
   m_Children: []
   m_Father: {fileID: 5917609754798818582}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &5917609754592659573
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609754592659569}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5917609754592659570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -302,13 +302,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609754753259973}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -1.75, y: 0, z: 1.15}
-  m_LocalScale: {x: 1.5, y: 10, z: 0.3}
+  m_LocalScale: {x: 10, y: 0.8, z: 0.3}
   m_Children: []
   m_Father: {fileID: 5917609754798818582}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &5917609754753260025
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609754753259973}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5917609754753259974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1579,13 +1579,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609756025288769}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.5, y: 0, z: 1.15}
-  m_LocalScale: {x: 1, y: 10, z: 0.3}
+  m_LocalScale: {x: 10, y: 0.5, z: 0.3}
   m_Children: []
   m_Father: {fileID: 5917609754798818582}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &5917609756025288773
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1593,7 +1593,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609756025288769}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5917609756025288770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1763,13 +1763,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609756265665736}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.5, y: 0, z: 1.15}
-  m_LocalScale: {x: 1, y: 10, z: 0.3}
+  m_LocalScale: {x: 10, y: 0.5, z: 0.3}
   m_Children: []
   m_Father: {fileID: 5917609754798818582}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &5917609756265665740
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1777,7 +1777,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5917609756265665736}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5917609756265665741
 MeshRenderer:
   m_ObjectHideFlags: 0

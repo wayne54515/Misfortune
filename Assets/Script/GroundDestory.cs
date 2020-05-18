@@ -19,7 +19,7 @@ public class GroundDestory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "Player")
+        if(other.name == "PlayerBody")
         {
             Destroy(ground);
         }

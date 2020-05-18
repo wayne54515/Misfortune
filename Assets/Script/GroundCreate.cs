@@ -7,6 +7,8 @@ public class GroundCreate : MonoBehaviour
     public GameObject[] ground;
     public GameObject self;
     private GameObject _ground, targetGround;
+    private bool isFour = false;
+    private int groundNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,8 @@ public class GroundCreate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         targetGround = ground[Random.Range(0, 4)];
-        if (other.name == "Player")
+        //targetGround = ground[3];
+        if (other.name == "PlayerBody")
         {
             int createpos = (int)self.transform.localPosition.z;
             //Debug.Log(createpos);
