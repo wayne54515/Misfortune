@@ -18,7 +18,11 @@ public class PlayerAction : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime * speedUp);
         if(speedUp < 5.5f)
+        {
             speedUp += 0.0005f;
+            _anim["jump"].speed += 0.0002f;
+        }
+            
         //Debug.Log(speedUp);
 
         //jump
@@ -42,6 +46,11 @@ public class PlayerAction : MonoBehaviour
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
+        //drop game over
+        if (gameObject.transform.GetChild(0).localPosition.y < -5)
+        {
+            speed = 0f;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -23,10 +23,11 @@ public class GroundCreate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        targetGround = ground[Random.Range(0, 4)];
+        
         //targetGround = ground[3];
         if (other.name == "PlayerBody")
         {
+            targetGround = ground[Random.Range(0, 4)];
             int createpos = (int)self.transform.localPosition.z;
             //Debug.Log(createpos);
             _ground = Instantiate(targetGround, new Vector3(0, 0, createpos + 10), Quaternion.identity);
