@@ -274,7 +274,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.95, z: 1}
+  m_Size: {x: 1.05, y: 2, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5917609754753259973
 GameObject:
@@ -366,7 +366,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.95, z: 1}
+  m_Size: {x: 1.05, y: 2, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5917609754782172264
 GameObject:
@@ -1555,6 +1555,7 @@ MonoBehaviour:
   - {fileID: 2682324521112815511, guid: 3edd4c26b73a25c429749d80adeb7ded, type: 3}
   - {fileID: 5917609754798818583}
   self: {fileID: 5917609754798818583}
+  trap: {fileID: 4270578504002155447, guid: 016c09c9436a20b40b42b431f1cb4b57, type: 3}
 --- !u!1 &5917609756025288769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1646,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.95, z: 1}
+  m_Size: {x: 1.05, y: 2.5, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5917609756154197207
 GameObject:
@@ -1829,7 +1830,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.95, z: 1}
+  m_Size: {x: 1.02, y: 2.5, z: 1.05}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5917609756298825473
 GameObject:

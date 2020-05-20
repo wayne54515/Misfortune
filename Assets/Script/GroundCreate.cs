@@ -5,10 +5,8 @@ using UnityEngine;
 public class GroundCreate : MonoBehaviour
 {
     public GameObject[] ground;
-    public GameObject self;
-    private GameObject _ground, targetGround;
-    private bool isFour = false;
-    private int groundNum;
+    public GameObject self, trap;
+    private GameObject _ground, targetGround, _trap;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +29,7 @@ public class GroundCreate : MonoBehaviour
             int createpos = (int)self.transform.localPosition.z;
             //Debug.Log(createpos);
             _ground = Instantiate(targetGround, new Vector3(0, 0, createpos + 10), Quaternion.identity);
+            _trap = Instantiate(trap, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.55f, createpos + Random.RandomRange(7.0f, 10.0f)), Quaternion.identity);
         }
     }
 }
