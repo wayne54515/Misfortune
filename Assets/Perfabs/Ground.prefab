@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ground: {fileID: 3044055414113128806}
+  trap: {fileID: 4270578504002155447, guid: 016c09c9436a20b40b42b431f1cb4b57, type: 3}
 --- !u!1 &3044055413109449882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,11 +2023,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3044055414113128807}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 25e1d65ecd5bac14f958cbb2a8b996f6,
-        type: 3}
-      propertyPath: m_Name
-      value: tree5
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 25e1d65ecd5bac14f958cbb2a8b996f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2096,6 +2092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 25e1d65ecd5bac14f958cbb2a8b996f6,
+        type: 3}
+      propertyPath: m_Name
+      value: tree5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25e1d65ecd5bac14f958cbb2a8b996f6, type: 3}

@@ -1085,6 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ground: {fileID: 2682324521112815511}
+  trap: {fileID: 4270578504002155447, guid: 016c09c9436a20b40b42b431f1cb4b57, type: 3}
 --- !u!1001 &5551483082445247109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1092,11 +1093,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2682324521112815510}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 94caa2e8f6a75b64ba5d708c59d5e301,
-        type: 3}
-      propertyPath: m_Name
-      value: tree3
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 94caa2e8f6a75b64ba5d708c59d5e301,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1166,6 +1162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 94caa2e8f6a75b64ba5d708c59d5e301,
+        type: 3}
+      propertyPath: m_Name
+      value: tree3
       objectReference: {fileID: 0}
     - target: {fileID: 2609975797871179320, guid: 94caa2e8f6a75b64ba5d708c59d5e301,
         type: 3}
