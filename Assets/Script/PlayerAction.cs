@@ -33,6 +33,7 @@ public class PlayerAction : MonoBehaviour
         //quick jump down
         if (Input.GetKey(KeyCode.DownArrow))
         {
+            //if(!_anim.isPlaying)
             _anim.Play("down");
         }
         //go right
@@ -46,20 +47,5 @@ public class PlayerAction : MonoBehaviour
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
-        //drop game over
-        if (gameObject.transform.GetChild(0).localPosition.y < -5)
-        {
-            speed = 0f;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Game Over
-        if (collision.gameObject.tag == "Obstacle")
-        {
-            speed = 0f;
-        }
-            
     }
 }
