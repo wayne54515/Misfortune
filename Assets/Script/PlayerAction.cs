@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerAction : MonoBehaviour
 {
     public Animation _anim;
+    private AudioSource audio;
     public float speed = 3.0f;
     private float speedUp = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class PlayerAction : MonoBehaviour
         {
             speedUp += 0.0005f;
             _anim["jump"].speed += 0.0002f;
+            audio.pitch += 0.00000001f;
         }
             
         //Debug.Log(speedUp);

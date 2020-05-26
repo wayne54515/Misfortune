@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class GroundCreate : MonoBehaviour
 {
-    public GameObject[] ground;
+    public GameObject[] ground, obstacle;
     public GameObject self, trap;
-    private GameObject _ground, targetGround, _trap;
+    private GameObject _ground, targetGround, _trap, targetObstacle, _obstacle;
+    private float a = 0, b = 180;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,10 @@ public class GroundCreate : MonoBehaviour
             //Debug.Log(createpos);
             _ground = Instantiate(targetGround, new Vector3(0, 0, createpos + 10), Quaternion.identity);
             _trap = Instantiate(trap, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.55f, createpos + Random.RandomRange(7.0f, 10.0f)), Quaternion.identity);
+
+            targetObstacle = obstacle[Random.Range(0, 7)];
+
+            _obstacle = Instantiate(targetObstacle, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.5f, createpos + Random.RandomRange(7.0f, 10.0f)), new Quaternion(Random.RandomRange(a,b), Random.RandomRange(a, b),Random.RandomRange(a, b),0));
         }
     }
 }
