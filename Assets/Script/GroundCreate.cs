@@ -33,9 +33,11 @@ public class GroundCreate : MonoBehaviour
             _ground = Instantiate(targetGround, new Vector3(0, 0, createpos + 10), Quaternion.identity);
             _trap = Instantiate(trap, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.55f, createpos + Random.RandomRange(7.0f, 10.0f)), Quaternion.identity);
 
-            targetObstacle = obstacle[Random.Range(0, 7)];
-
-            _obstacle = Instantiate(targetObstacle, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.5f, createpos + Random.RandomRange(7.0f, 10.0f)), new Quaternion(Random.RandomRange(a,b), Random.RandomRange(a, b),Random.RandomRange(a, b),0));
+            if (Random.Range(0, 1) > 0.5)
+            {
+                targetObstacle = obstacle[Random.Range(0, 7)];
+                _obstacle = Instantiate(targetObstacle, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.2f, createpos + Random.RandomRange(7.0f, 10.0f)), new Quaternion(Random.RandomRange(a, b), Random.RandomRange(a, b), Random.RandomRange(a, b), 0));
+            }
         }
     }
 }
