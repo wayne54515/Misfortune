@@ -975,7 +975,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -600, y: 0}
+  m_SizeDelta: {x: -500, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190960450
 MonoBehaviour:
@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.107467085, g: 0.5221196, b: 0.990566, a: 0.392}
+  m_Color: {r: 0.9056604, g: 0.67526776, b: 0.14097545, a: 0.392}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.5
 --- !u!222 &1190960451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1866,6 +1866,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 00b7a93ca2ae6894fa61d66958fee172, type: 2}
+    - target: {fileID: 3044055413048142169, guid: 65c33147498c31a4d8a97aa2fd4c9e45,
+        type: 3}
+      propertyPath: trap
+      value: 
+      objectReference: {fileID: 4270578504002155447, guid: 016c09c9436a20b40b42b431f1cb4b57,
+        type: 3}
     - target: {fileID: 3044055413186708553, guid: 65c33147498c31a4d8a97aa2fd4c9e45,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1941,12 +1947,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3044055413048142169, guid: 65c33147498c31a4d8a97aa2fd4c9e45,
-        type: 3}
-      propertyPath: trap
-      value: 
-      objectReference: {fileID: 4270578504002155447, guid: 016c09c9436a20b40b42b431f1cb4b57,
-        type: 3}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 3044055413109449884, guid: 65c33147498c31a4d8a97aa2fd4c9e45, type: 3}
@@ -2041,3 +2041,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8684529f565129c4a86ba260ffb3d624, type: 3}
+--- !u!1 &7758455885987309928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7758455885296747542, guid: 8684529f565129c4a86ba260ffb3d624,
+    type: 3}
+  m_PrefabInstance: {fileID: 7758455885987309927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!45 &7758455885987309929
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758455885987309928}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: b6a3f8bca2c865243929bac258c89b96, type: 2}
