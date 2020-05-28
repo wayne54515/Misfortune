@@ -930,7 +930,8 @@ MonoBehaviour:
   showPlayerName: {fileID: 1778428563}
   showTotalDistance: {fileID: 1469913496}
   showTotalTime: {fileID: 45455182}
-
+  btn_restart: {fileID: 699773594}
+  btn_quitGame: {fileID: 680530625}
 --- !u!1 &945009267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,9 +1059,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  btn_restart: {fileID: 699773594}
-  btn_quitGame: {fileID: 680530625}
-
 --- !u!1 &1074387304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,12 +2090,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 00b7a93ca2ae6894fa61d66958fee172, type: 2}
-    - target: {fileID: 3044055413048142169, guid: 65c33147498c31a4d8a97aa2fd4c9e45,
-        type: 3}
-      propertyPath: trap
-      value: 
-      objectReference: {fileID: 4270578504002155447, guid: 016c09c9436a20b40b42b431f1cb4b57,
-        type: 3}
     - target: {fileID: 3044055413186708553, guid: 65c33147498c31a4d8a97aa2fd4c9e45,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2173,6 +2165,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3044055413048142169, guid: 65c33147498c31a4d8a97aa2fd4c9e45,
+        type: 3}
+      propertyPath: trap
+      value: 
+      objectReference: {fileID: 4270578504002155447, guid: 016c09c9436a20b40b42b431f1cb4b57,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 3044055413109449884, guid: 65c33147498c31a4d8a97aa2fd4c9e45, type: 3}
@@ -2253,7 +2251,7 @@ PrefabInstance:
     - target: {fileID: 7758455885215473898, guid: 8684529f565129c4a86ba260ffb3d624,
         type: 3}
       propertyPath: m_Radius
-      value: 0.51
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7758455885215473898, guid: 8684529f565129c4a86ba260ffb3d624,
         type: 3}
@@ -2264,6 +2262,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Direction
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758455885215473898, guid: 8684529f565129c4a86ba260ffb3d624,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758455885215473899, guid: 8684529f565129c4a86ba260ffb3d624,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8684529f565129c4a86ba260ffb3d624, type: 3}
@@ -2282,3 +2290,15 @@ Skybox:
   m_GameObject: {fileID: 7758455885987309928}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: b6a3f8bca2c865243929bac258c89b96, type: 2}
+--- !u!114 &7758455885987309933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758455885987309928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dce255f48ff63549b0289af547ade9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

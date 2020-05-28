@@ -19,10 +19,9 @@ public class PlayerFail : MonoBehaviour
             playerParent.speed = 0f;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Obstacle")
+        if (collision.gameObject.tag == "Obstacle")
         {
             playerParent.speed = 0f;
             Debug.Log("child hit");

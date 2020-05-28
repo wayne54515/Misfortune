@@ -11,7 +11,7 @@ public class LoginUI : MonoBehaviour
     public Button _StartGame, btn_quitGame;
 
     public static string UserName;
-    public static string setting_diffcult;
+    public static string setting_diffcult = "easy";
 
     // Start is called before the first frame update
     void Start()

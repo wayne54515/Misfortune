@@ -6,7 +6,7 @@ public class TrapEffect : MonoBehaviour
 {
     private GameObject player,playerMain;
     private Rigidbody rb;
-    private float trapZ;
+    private float trapZ, trapAppearRate;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +19,14 @@ public class TrapEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(trapZ);
+        //Debug.Log(trapZ);
         if ((trapZ - playerMain.transform.localPosition.z) < -3)
             Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        float x, z;
+        float x;
         if(other.name == "PlayerBody")
         {
             x = Random.Range(-1, 2);
