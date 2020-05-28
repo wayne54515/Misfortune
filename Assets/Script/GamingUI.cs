@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GamingUI : MonoBehaviour
@@ -21,12 +22,27 @@ public class GamingUI : MonoBehaviour
     private bool isGameOver = false;
     private int noMoveFramesCount = 0;
 
+    public Button btn_restart, btn_quitGame;
+
     // Start is called before the first frame update
     void Start()
     {
         tv_showPlayerName.text = LoginUI.UserName;
         showPlayerName.text = "Name : " + LoginUI.UserName;
         GameOverUI.SetActive(false);
+
+        btn_restart.onClick.AddListener(btn_restart_onClick);
+        btn_quitGame.onClick.AddListener(btn_quitGame_onClick);
+    }
+
+    void btn_restart_onClick()
+    {
+        SceneManager.LoadScene("LoginScene");
+    }
+
+    void btn_quitGame_onClick()
+    {
+        Application.Quit();
     }
 
     // Update is called once per frame

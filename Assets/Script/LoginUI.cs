@@ -8,7 +8,7 @@ public class LoginUI : MonoBehaviour
 {
     public InputField _Userid;
     public Dropdown _Diffcult;
-    public Button _StartGame;
+    public Button _StartGame, btn_quitGame;
 
     public static string UserName;
     public static string setting_diffcult;
@@ -20,12 +20,18 @@ public class LoginUI : MonoBehaviour
         _Userid = GameObject.Find("Canvas/Panel/InputNameField").GetComponent<InputField>();
         _StartGame.onClick.AddListener(StartGame);
         _Diffcult.onValueChanged.AddListener(SetDiffcult) ;
+        btn_quitGame.onClick.AddListener(QuitGame);
     }
 
     void StartGame()
     {
         UserName = _Userid.text.ToString();
         SceneManager.LoadScene("GameScene");
+    }
+
+    void QuitGame()
+    {
+        Application.Quit();
     }
 
     void SetDiffcult(int index)
