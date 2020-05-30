@@ -9,7 +9,6 @@ public class GroundCreate : MonoBehaviour
     public GameObject self, trap;
     private GameObject _ground, targetGround, _trap, targetObstacle, _obstacle;
     private float rotationBegin = 0, rotationFinal = 360;
-    private float time;
 
     // Start is called before the first frame update
     void Start()

@@ -6,7 +6,7 @@ public class TrapEffect : MonoBehaviour
 {
     private GameObject player,playerMain;
     private Rigidbody rb;
-    private float trapZ, trapAppearRate;
+    private float trapZ;
     // Start is called before the first frame update
     void Start()
     {

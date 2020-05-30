@@ -31,7 +31,7 @@ public class DifficultController : MonoBehaviour
         {
             if (trapRate <= 100)
             {
-                trapRate += 0.1f;
+                trapRate += 0.5f;
             }
             if (obstacleRate <= 100)
             {

@@ -21,6 +21,7 @@ public class GamingUI : MonoBehaviour
 
     private bool isGameOver = false;
     private int noMoveFramesCount = 0;
+    private float gameTime = 0;
 
     public Button btn_restart, btn_quitGame;
 
@@ -59,10 +60,10 @@ public class GamingUI : MonoBehaviour
             noMoveFramesCount = 0;
         }
 
-        timer = (int)Time.time;
+        gameTime += Time.deltaTime;
         distance = (int)player.transform.position.z;
 
-        tv_showTime.text = "Time : " + timer.ToString();
+        tv_showTime.text = "Time : " + ((int)gameTime).ToString();
         tv_showDistance.text = "Distance : " + distance.ToString();
 
         if ( noMoveFramesCount > 60)
@@ -76,7 +77,7 @@ public class GamingUI : MonoBehaviour
     void ShowGameOver()
     {
         GameOverUI.SetActive(true);
-        showTotalTime.text = "Time : " + timer.ToString();
+        showTotalTime.text = "Time : " + ((int)gameTime).ToString();
         showTotalDistance.text = "Distance: " + distance.ToString();
     }
 }
