@@ -38,6 +38,7 @@ public class DifficultController : MonoBehaviour
                 obstacleRate += 0.2f;
             }
             //Debug.Log("Trap Rate: "+trapRate);
+            Debug.Log("Obstacle Rate: " + obstacleRate);
             time = 0;
         }
     }
