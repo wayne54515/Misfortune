@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 3484521625062344465}
   - component: {fileID: -3415928363200055342}
   - component: {fileID: -3065412540554112818}
+  - component: {fileID: 4626847008852476169}
   m_Layer: 0
   m_Name: animal_elephant
   m_TagString: Obstacle
@@ -137,3 +138,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 432583248348247298}
+--- !u!114 &4626847008852476169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432583248348247298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cbc9ea24392cd4e97cf8036de3ea63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7758455886774030547, guid: 8684529f565129c4a86ba260ffb3d624, type: 3}

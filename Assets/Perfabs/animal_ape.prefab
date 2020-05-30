@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2281104640876164741}
   - component: {fileID: 2464391480605422440}
   - component: {fileID: -7750345951701491868}
+  - component: {fileID: -2729653870134236855}
   m_Layer: 0
   m_Name: animal_ape
   m_TagString: Obstacle
@@ -59,6 +60,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 3022835972606641302}
+--- !u!114 &-2729653870134236855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022835972606641302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cbc9ea24392cd4e97cf8036de3ea63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7758455886774030547, guid: 8684529f565129c4a86ba260ffb3d624, type: 3}
 --- !u!1 &3242527456949592862
 GameObject:
   m_ObjectHideFlags: 0

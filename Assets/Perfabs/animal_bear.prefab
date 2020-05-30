@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 3016863236810457763}
   - component: {fileID: 1673412946512942659}
   - component: {fileID: 1612009014583676057}
+  - component: {fileID: -4050036838573838383}
   m_Layer: 0
   m_Name: animal_bear
   m_TagString: Obstacle
@@ -137,3 +138,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 2271315019017957552}
+--- !u!114 &-4050036838573838383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2271315019017957552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cbc9ea24392cd4e97cf8036de3ea63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7758455886774030547, guid: 8684529f565129c4a86ba260ffb3d624, type: 3}

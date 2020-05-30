@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 5906577817913987252}
   - component: {fileID: 5927019035014145252}
   - component: {fileID: -2806522613589390903}
+  - component: {fileID: -5111154844619306395}
   m_Layer: 0
   m_Name: animal_alpaca
   m_TagString: Obstacle
@@ -137,3 +138,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 7467875158164890279}
+--- !u!114 &-5111154844619306395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467875158164890279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cbc9ea24392cd4e97cf8036de3ea63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7758455886774030547, guid: 8684529f565129c4a86ba260ffb3d624, type: 3}

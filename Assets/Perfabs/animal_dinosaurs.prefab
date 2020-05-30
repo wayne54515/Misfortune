@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8278214151967342036}
   - component: {fileID: 5446318302422735408}
   - component: {fileID: -1556750847490633264}
+  - component: {fileID: 8970759074192091091}
   m_Layer: 0
   m_Name: animal_dinosaurs
   m_TagString: Obstacle
@@ -59,6 +60,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 4952066444239638471}
+--- !u!114 &8970759074192091091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952066444239638471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cbc9ea24392cd4e97cf8036de3ea63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7758455886774030547, guid: 8684529f565129c4a86ba260ffb3d624, type: 3}
 --- !u!1 &7401663116541232983
 GameObject:
   m_ObjectHideFlags: 0
