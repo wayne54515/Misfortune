@@ -18,7 +18,7 @@ public class DifficultController : MonoBehaviour
         else
         {
             trapRate = 50;
-            obstacleRate = 70;
+            obstacleRate = 50;
             playerSpeed = 4.5f;
         }
     }
@@ -35,7 +35,7 @@ public class DifficultController : MonoBehaviour
             }
             if (obstacleRate <= 100)
             {
-                obstacleRate += 0.2f;
+                obstacleRate += 1f;
             }
             //Debug.Log("Trap Rate: "+trapRate);
             time = 0;

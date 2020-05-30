@@ -7,7 +7,7 @@ public class PlayerAction : MonoBehaviour
     public Animation _anim;
     private AudioSource audio;
     public float speed = DifficultController.playerSpeed;
-    private float speedUp = 1.0f;
+    private float speedUp = 1.0f, D;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +17,13 @@ public class PlayerAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        D = (0.8f + speedUp / 5);       //D在1~2之間遞增
         transform.Translate(Vector3.forward * speed * Time.deltaTime * speedUp);
         if(speedUp < 6.0f)
         {
             speedUp += 0.0005f;
             _anim["jump"].speed += 0.0002f;
-            audio.pitch += 0.0001f;
+            audio.pitch = 1 + 0.001f * speedUp;
         }
             
         //Debug.Log(speedUp);
@@ -41,12 +42,12 @@ public class PlayerAction : MonoBehaviour
         //go right
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * Time.deltaTime * D);
         }
         //go left
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * Time.deltaTime * D);
         }
 
     }
