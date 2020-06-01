@@ -18,6 +18,7 @@ public class GamingUI : MonoBehaviour
     public Text showPlayerName;
     public Text showTotalDistance;
     public Text showTotalTime;
+    public Text showMaxDistance;
 
     private bool isGameOver = false;
     private int noMoveFramesCount = 0;
@@ -25,9 +26,14 @@ public class GamingUI : MonoBehaviour
 
     public Button btn_restart, btn_quitGame;
 
+    private SaveAndLoad SL;
+    private maxDistance md = new maxDistance();
+
     // Start is called before the first frame update
     void Start()
     {
+        SL = GetComponent<SaveAndLoad>();
+
         tv_showPlayerName.text = LoginUI.UserName;
         showPlayerName.text = "Name : " + LoginUI.UserName;
         GameOverUI.SetActive(false);
@@ -79,5 +85,27 @@ public class GamingUI : MonoBehaviour
         GameOverUI.SetActive(true);
         showTotalTime.text = "Time : " + ((int)gameTime).ToString();
         showTotalDistance.text = "Distance: " + distance.ToString();
+        LoadDis();
+        SaveDis();
     }
+
+    public void SaveDis()
+    {
+        if(int.Parse(md.dis) < distance)
+        {
+            md.dis = distance.ToString();
+            SL.SaveData(md);
+        }
+    }
+    public void LoadDis()
+    {
+        md = (maxDistance)SL.LoadData(typeof(maxDistance));
+        showMaxDistance.text = "Max Distance : " + md.dis;//載入時修改場景裡的資料
+        Debug.Log(md);
+    }
+}
+
+public class maxDistance
+{
+    public string dis;
 }
