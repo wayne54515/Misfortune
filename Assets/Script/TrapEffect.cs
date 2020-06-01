@@ -5,11 +5,13 @@ using UnityEngine;
 public class TrapEffect : MonoBehaviour
 {
     private GameObject player,playerMain;
+    private PlayerAction playerParent;
     private Rigidbody rb;
     private float trapZ;
     // Start is called before the first frame update
     void Start()
     {
+        playerParent = FindObjectOfType<PlayerAction>();
         playerMain = FindObjectOfType<PlayerAction>().gameObject;
         player = FindObjectOfType<PlayerAction>().gameObject.transform.GetChild(0).gameObject;
         rb = player.GetComponent<Rigidbody>();
@@ -31,6 +33,8 @@ public class TrapEffect : MonoBehaviour
         {
             x = Random.Range(-1, 2);
             rb.AddForce(6 * x, 5, 0, ForceMode.Impulse);
+            if (x != 0)
+                playerParent.speed = 0f;
             Debug.Log("hit trap");
         }
     }

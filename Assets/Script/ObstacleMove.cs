@@ -10,13 +10,10 @@ public class ObstacleMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (Random.Range(0, 100) < 50)
+        if (Random.Range(0, 100) < 70)
         {
-            speed = Random.RandomRange(1.0f, 3.0f);
+            speed = Random.RandomRange(2.0f, 5.0f);
         }
-            
-
-        
     }
 
     // Update is called once per frame
@@ -29,6 +26,5 @@ public class ObstacleMove : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime);
             }
         }
-        
     }
 }

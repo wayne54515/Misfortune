@@ -40,7 +40,7 @@ public class GroundCreate : MonoBehaviour
             if (Random.Range(0, 100) < DifficultController.obstacleRate)
             {
                 targetObstacle = obstacle[Random.Range(0, 7)];
-                _obstacle = Instantiate(targetObstacle, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.2f, createpos + Random.RandomRange(7.0f, 10.0f)), new Quaternion(Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), 0));
+                _obstacle = Instantiate(targetObstacle, new Vector3(Random.RandomRange(-1.5f, 1.5f), Random.RandomRange(0.2f, 0.6f), createpos + Random.RandomRange(7.0f, 10.0f)), new Quaternion(Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), 0));
             }
         }
     }
