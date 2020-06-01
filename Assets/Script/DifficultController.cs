@@ -29,11 +29,11 @@ public class DifficultController : MonoBehaviour
         time += Time.deltaTime;
         if(time > 2)
         {
-            if (trapRate <= 100)
+            if (trapRate < 100)
             {
                 trapRate += 0.5f;
             }
-            if (obstacleRate <= 100)
+            if (obstacleRate < 100)
             {
                 obstacleRate += 1f;
             }
