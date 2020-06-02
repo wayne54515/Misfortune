@@ -85,8 +85,8 @@ public class GamingUI : MonoBehaviour
         GameOverUI.SetActive(true);
         showTotalTime.text = "Time : " + ((int)gameTime).ToString();
         showTotalDistance.text = "Distance: " + distance.ToString();
-        LoadDis();
-        SaveDis();
+        //LoadDis();
+        //SaveDis();
     }
 
     public void SaveDis()
