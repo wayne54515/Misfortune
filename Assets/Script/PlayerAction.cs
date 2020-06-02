@@ -37,7 +37,7 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             //if(!_anim.isPlaying)
-            _anim.Play("down");
+            //_anim.Play("down");
         }
         //go right
         if (Input.GetKey(KeyCode.RightArrow))
