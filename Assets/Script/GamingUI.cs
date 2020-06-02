@@ -27,7 +27,6 @@ public class GamingUI : MonoBehaviour
     public Button btn_restart, btn_quitGame;
 
     private SaveAndLoad SL;
-    private maxDistance md = new maxDistance();
 
     // Start is called before the first frame update
     void Start()
@@ -55,9 +54,9 @@ public class GamingUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( isGameOver ) { return; }
+        if (isGameOver) { return; }
 
-        if ( (int)player.transform.position.z == distance)
+        if ((int)player.transform.position.z == distance)
         {
             noMoveFramesCount += 1;
         }
@@ -72,7 +71,7 @@ public class GamingUI : MonoBehaviour
         tv_showTime.text = "Time : " + ((int)gameTime).ToString();
         tv_showDistance.text = "Distance : " + distance.ToString();
 
-        if ( noMoveFramesCount > 60)
+        if (noMoveFramesCount > 60)
         {
             ShowGameOver();
             isGameOver = true;
@@ -85,27 +84,44 @@ public class GamingUI : MonoBehaviour
         GameOverUI.SetActive(true);
         showTotalTime.text = "Time : " + ((int)gameTime).ToString();
         showTotalDistance.text = "Distance: " + distance.ToString();
-        //LoadDis();
-        //SaveDis();
+        LoadAndSaveDis();
     }
 
-    public void SaveDis()
+    public void LoadAndSaveDis()
     {
-        if(int.Parse(md.dis) < distance)
+        maxDistance md = new maxDistance();
+        md.dis = LoadDis();
+        
+        if (int.Parse(md.dis) < distance)
         {
             md.dis = distance.ToString();
             SL.SaveData(md);
         }
+        else if (md.dis == "0")
+        {
+            SL.SaveData(md);
+        }
     }
-    public void LoadDis()
+    public string LoadDis()
     {
+        maxDistance md = new maxDistance();
         md = (maxDistance)SL.LoadData(typeof(maxDistance));
-        showMaxDistance.text = "Max Distance : " + md.dis;//載入時修改場景裡的資料
-        Debug.Log(md);
+        if (md == null)
+        {
+            showMaxDistance.text = "Max Distance : 0";
+            return "0";
+        }
+        else
+        {
+            showMaxDistance.text = "Max Distance : " + md.dis;//載入時修改場景裡的資料
+            return md.dis;
+        }
+            
+        //Debug.Log(md);
     }
 }
 
 public class maxDistance
 {
-    public string dis;
+    public string dis { get; set; }
 }

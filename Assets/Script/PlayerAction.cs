@@ -29,12 +29,12 @@ public class PlayerAction : MonoBehaviour
         //Debug.Log(speedUp);
 
         //jump
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             _anim.Play("jump");
         }
         //quick jump down
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             //if(!_anim.isPlaying)
             _anim.Play("down");

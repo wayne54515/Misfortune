@@ -7,10 +7,10 @@ public class Follow : MonoBehaviour
     private GameObject player;
     void Start()
     {
-        player = FindObjectOfType<PlayerAction>().gameObject;
+        player = FindObjectOfType<PlayerAction>().gameObject.transform.GetChild(0).gameObject;
     }
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x, -2f, player.transform.position.z);
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 0.9f, player.transform.position.z - 9f);
     }
 }
