@@ -21,6 +21,7 @@ public class PlayerAction : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime * speedUp);
         if(speedUp < 6.0f)
         {
+            Debug.Log(speedUp);
             speedUp += 0.0005f;
             _anim["jump"].speed += 0.0002f;
             audio.pitch = 1 + 0.001f * speedUp;

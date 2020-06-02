@@ -31,16 +31,16 @@ public class GroundCreate : MonoBehaviour
             targetGround = ground[Random.Range(0, 4)];
             int createpos = (int)self.transform.localPosition.z;
             //Debug.Log(createpos);
-            _ground = Instantiate(targetGround, new Vector3(0, 0, createpos + 10), Quaternion.identity);
+            _ground = Instantiate(targetGround, new Vector3(0, 0, createpos + 20), Quaternion.identity);
             
             
             if (Random.Range(0,100) < DifficultController.trapRate)
-                _trap = Instantiate(trap, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.55f, createpos + Random.RandomRange(7.0f, 10.0f)), Quaternion.identity);
+                _trap = Instantiate(trap, new Vector3(Random.RandomRange(-1.5f, 1.5f), 0.55f, createpos + Random.RandomRange(17.0f, 20.0f)), Quaternion.identity);
 
             if (Random.Range(0, 100) < DifficultController.obstacleRate)
             {
                 targetObstacle = obstacle[Random.Range(0, 7)];
-                _obstacle = Instantiate(targetObstacle, new Vector3(Random.RandomRange(-1.5f, 1.5f), Random.RandomRange(0.2f, 0.6f), createpos + Random.RandomRange(7.0f, 10.0f)), new Quaternion(Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), 0));
+                _obstacle = Instantiate(targetObstacle, new Vector3(Random.RandomRange(-1.5f, 1.5f), Random.RandomRange(0.2f, 0.6f), createpos + Random.RandomRange(17.0f, 20.0f)), new Quaternion(Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), Random.RandomRange(rotationBegin, rotationFinal), 0));
             }
         }
     }
