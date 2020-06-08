@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class GamingUI : MonoBehaviour
 {
     public Text tv_showPlayerName;
@@ -89,38 +90,39 @@ public class GamingUI : MonoBehaviour
 
     public void LoadAndSaveDis()
     {
-        maxDistance md = new maxDistance();
-        md.dis = LoadDis();
+        string maxdis;
+        maxdis = LoadDis();
         
-        if (int.Parse(md.dis) < distance)
+        if (int.Parse(maxdis) < distance)
         {
-            md.dis = distance.ToString();
-            SL.SaveData(md);
+            maxdis = distance.ToString();
+            SL.SaveData(maxdis);
         }
-        else if (md.dis == "0")
+        else if (maxdis == "0")
         {
-            SL.SaveData(md);
+            SL.SaveData(maxdis);
         }
     }
     public string LoadDis()
     {
-        maxDistance md = new maxDistance();
-        md = (maxDistance)SL.LoadData(typeof(maxDistance));
-        if (md == null)
+        //maxDistance md = new maxDistance();
+        string maxdis = SL.LoadData();
+        if (maxdis == null)
         {
             showMaxDistance.text = "Max Distance : 0";
             return "0";
         }
         else
         {
-            showMaxDistance.text = "Max Distance : " + md.dis;//載入時修改場景裡的資料
-            return md.dis;
+            showMaxDistance.text = "Max Distance : " + maxdis;//載入時修改場景裡的資料
+            return maxdis;
         }
             
         //Debug.Log(md);
     }
 }
 
+[System.Serializable]
 public class maxDistance
 {
     public string dis { get; set; }
