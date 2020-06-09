@@ -72,10 +72,10 @@ public class PlayerFail : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Color colorStart = Color.white;
         Color colorEnd = Color.clear;
-        while (m.color.a > 0.15)
+        while (m.color.a > 0.31)
         {
             Debug.Log(m.color.a);
-            m.color = Color.Lerp(colorStart, colorEnd, Mathf.PingPong(Time.time, 0.9f));
+            m.color = Color.Lerp(colorStart, colorEnd, Mathf.PingPong(Time.time, 0.7f));
             yield return null;
         }
     }
