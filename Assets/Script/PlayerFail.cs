@@ -21,9 +21,9 @@ public class PlayerFail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.localPosition.y < -5)
+        if (gameObject.transform.localPosition.y < -2)
         {
-            playerParent.speed = 0f;
+            GameOver();
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -31,20 +31,26 @@ public class PlayerFail : MonoBehaviour
 
         if (collision.gameObject.tag == "Obstacle")
         {
-            playerParent.speed = 0f;
-            var render = player.GetComponentsInChildren<Renderer>();
-            //Debug.Log(render.Length);
-            Color colorStart = Color.white;
-            Color colorEnd = Color.clear;
-            rb.useGravity = false;
-            rb.AddForce(0, 1.2f, 0, ForceMode.Impulse);
-
-            foreach(var r in render)
-            {
-                r.material.color = Color.Lerp(colorStart, colorEnd, Mathf.PingPong(Time.time, 0.7f));
-            }
+            GameOver();
 
             Debug.Log("child hit");
+        }
+    }
+
+    private void GameOver()
+    {
+        playerParent.speed = 0f;
+        var render = player.GetComponentsInChildren<Renderer>();
+        //Debug.Log(render.Length);
+        Color colorStart = Color.white;
+        Color colorEnd = Color.clear;
+        rb.useGravity = false;
+        rb.AddForce(0, 1.2f, 0, ForceMode.Impulse);
+        rb.constraints = RigidbodyConstraints.FreezePositionZ;
+
+        foreach (var r in render)
+        {
+            r.material.color = Color.Lerp(colorStart, colorEnd, Mathf.PingPong(Time.time, 0.7f));
         }
     }
 }
