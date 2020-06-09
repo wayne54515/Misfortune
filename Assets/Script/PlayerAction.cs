@@ -8,10 +8,14 @@ public class PlayerAction : MonoBehaviour
     private AudioSource audio;
     public float speed = DifficultController.playerSpeed;
     private float speedUp = 1.0f, D;
+    private bool isFail;
+    private GameObject playerBody;
     // Start is called before the first frame update
     void Start()
     {
         audio = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+        isFail = FindObjectOfType<PlayerFail>().fail;
+        playerBody = gameObject.transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -26,27 +30,31 @@ public class PlayerAction : MonoBehaviour
             _anim["jump"].speed += 0.0002f;
             audio.pitch = 1 + 0.001f * speedUp;
         }
-            
+
         //Debug.Log(speedUp);
+        isFail = FindObjectOfType<PlayerFail>().fail;
 
         //jump
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) & !isFail)
         {
             _anim.Play("jump");
         }
-        //quick jump down
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        //gravity on/off
+        if (Input.GetKey(KeyCode.N) & Input.GetKey(KeyCode.G) & !isFail)
         {
-            //if(!_anim.isPlaying)
-            //_anim.Play("down");
+            playerBody.GetComponent<Rigidbody>().useGravity = false;
+        }
+        if (Input.GetKey(KeyCode.H) & Input.GetKey(KeyCode.G) & !isFail)
+        {
+            playerBody.GetComponent<Rigidbody>().useGravity = true;
         }
         //go right
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) & !isFail)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime * D);
         }
         //go left
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) & !isFail)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime * D);
         }

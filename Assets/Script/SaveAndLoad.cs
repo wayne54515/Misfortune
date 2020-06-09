@@ -21,20 +21,6 @@ public class SaveAndLoad : MonoBehaviour
         Directory.CreateDirectory(filePath);//新增資料夾 filePath為資料夾路徑
     }
 
-    private string SerializeObject(object PlayerData)
-    {
-        string serializePlayerData = "";
-        serializePlayerData = JsonConvert.SerializeObject(PlayerData);//序列化玩家存檔
-        return serializePlayerData;//返回字串型態的玩家存檔
-    }
-
-    private static object DeserializeObject(string _PlayerData, Type _PlayerDataType)
-    {
-        object playerData = null;
-        playerData = JsonConvert.DeserializeObject(_PlayerData, _PlayerDataType);//反序列化玩家的存檔
-        return playerData;//返回自定義類別的玩家存檔
-    }
-
     public void SaveData(string content)
     {
         BinaryFormatter bf = new BinaryFormatter();

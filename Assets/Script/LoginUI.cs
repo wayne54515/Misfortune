@@ -18,6 +18,10 @@ public class LoginUI : MonoBehaviour
     {
         Debug.Log("Start");
         _Userid = GameObject.Find("Canvas/Panel/InputNameField").GetComponent<InputField>();
+        if(UserName != null)
+        {
+            _Userid.text = UserName;
+        }
         _StartGame.onClick.AddListener(StartGame);
         _Diffcult.onValueChanged.AddListener(SetDiffcult) ;
         btn_quitGame.onClick.AddListener(QuitGame);
