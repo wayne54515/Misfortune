@@ -31,14 +31,9 @@ public class PlayerAction : MonoBehaviour
             audio.pitch = 1 + 0.001f * speedUp;
         }
 
-        //Debug.Log(speedUp);
+        //Debug.Log(LoginUI.setting_diffcult);
         isFail = FindObjectOfType<PlayerFail>().fail;
 
-        //jump
-        if (Input.GetKeyDown(KeyCode.UpArrow) & !isFail)
-        {
-            _anim.Play("jump");
-        }
         //gravity on/off
         if (Input.GetKey(KeyCode.N) & Input.GetKey(KeyCode.G) & !isFail)
         {
@@ -48,15 +43,42 @@ public class PlayerAction : MonoBehaviour
         {
             playerBody.GetComponent<Rigidbody>().useGravity = true;
         }
-        //go right
-        if (Input.GetKey(KeyCode.RightArrow) & !isFail)
+
+        if (LoginUI.setting_diffcult.Equals("easy") & !isFail)
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime * D);
+            //jump
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                _anim.Play("jump");
+            }
+            //go right
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Translate(Vector3.right * speed * Time.deltaTime * D);
+            }
+            //go left
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Translate(Vector3.left * speed * Time.deltaTime * D);
+            }
         }
-        //go left
-        if (Input.GetKey(KeyCode.LeftArrow) & !isFail)
+        if (LoginUI.setting_diffcult.Equals("diffcult") & !isFail)
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime * D);
+            //jump
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                _anim.Play("jump");
+            }
+            //go right
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Translate(Vector3.right * speed * Time.deltaTime * D);
+            }
+            //go left
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Translate(Vector3.left * speed * Time.deltaTime * D);
+            }
         }
 
     }

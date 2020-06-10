@@ -11,6 +11,7 @@ public class GamingUI : MonoBehaviour
     public Text tv_showTime;
     public Text tv_showDistance;
     public GameObject GameOverUI;
+    public GameObject TeachUI;
 
     public static int timer;
     public static int distance;
@@ -37,6 +38,7 @@ public class GamingUI : MonoBehaviour
         tv_showPlayerName.text = LoginUI.UserName;
         showPlayerName.text = "Name : " + LoginUI.UserName;
         GameOverUI.SetActive(false);
+        TeachUI.SetActive(true);
 
         btn_restart.onClick.AddListener(btn_restart_onClick);
         btn_quitGame.onClick.AddListener(btn_quitGame_onClick);
@@ -72,11 +74,19 @@ public class GamingUI : MonoBehaviour
         tv_showTime.text = "Time : " + ((int)gameTime).ToString();
         tv_showDistance.text = "Distance : " + distance.ToString();
 
+        //Debug.Log(gameTime);
+        if (gameTime >= 4)
+        {
+            TeachUI.SetActive(false);
+        }
+
         if (noMoveFramesCount > 60)
         {
             ShowGameOver();
             isGameOver = true;
         }
+
+        
 
     }
 
