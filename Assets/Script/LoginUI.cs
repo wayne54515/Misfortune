@@ -18,7 +18,8 @@ public class LoginUI : MonoBehaviour
     {
         Debug.Log("Start");
         _Userid = GameObject.Find("Canvas/Panel/InputNameField").GetComponent<InputField>();
-        if(UserName != null)
+        setting_diffcult = "easy";
+        if (UserName != null)
         {
             _Userid.text = UserName;
         }

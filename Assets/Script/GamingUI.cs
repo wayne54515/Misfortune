@@ -20,7 +20,7 @@ public class GamingUI : MonoBehaviour
     public Text showPlayerName;
     public Text showTotalDistance;
     public Text showTotalTime;
-    public Text showMaxDistance;
+    public Text showMaxDistanceE, showMaxDistanceH;
 
     private bool isGameOver = false;
     private int noMoveFramesCount = 0;
@@ -93,6 +93,7 @@ public class GamingUI : MonoBehaviour
     void ShowGameOver()
     {
         GameOverUI.SetActive(true);
+        TeachUI.SetActive(false);
         showTotalTime.text = "Time : " + ((int)gameTime).ToString();
         showTotalDistance.text = "Distance: " + distance.ToString();
         LoadAndSaveDis();
@@ -100,34 +101,37 @@ public class GamingUI : MonoBehaviour
 
     public void LoadAndSaveDis()
     {
-        string maxdis;
-        maxdis = LoadDis();
+        maxDistance md = new maxDistance();
+        md = (maxDistance)LoadDis();
         
-        if (int.Parse(maxdis) < distance)
+        if (LoginUI.setting_diffcult.Equals("easy"))
         {
-            maxdis = distance.ToString();
-            SL.SaveData(maxdis);
-        }
-        else if (maxdis == "0")
-        {
-            SL.SaveData(maxdis);
-        }
-    }
-    public string LoadDis()
-    {
-        //maxDistance md = new maxDistance();
-        string maxdis = SL.LoadData();
-        if (maxdis == null)
-        {
-            showMaxDistance.text = "Max Distance : 0";
-            return "0";
+            if (int.Parse(md.easyDis) < distance)
+            {
+                md.easyDis = distance.ToString();            
+            }
         }
         else
         {
-            showMaxDistance.text = "Max Distance : " + maxdis;//載入時修改場景裡的資料
-            return maxdis;
+            if (int.Parse(md.hardDis) < distance)
+            {
+                md.hardDis = distance.ToString();
+            }
         }
-            
+        SL.SaveData(md);
+
+
+    }
+    public object LoadDis()
+    {
+        maxDistance md = new maxDistance();
+        
+        md = (maxDistance)SL.LoadData();
+
+        showMaxDistanceE.text = "Easy Max Distance : " + md.easyDis;
+        showMaxDistanceH.text = "Hard Max Distance : " + md.hardDis;
+        return md;
+
         //Debug.Log(md);
     }
 }
@@ -135,5 +139,6 @@ public class GamingUI : MonoBehaviour
 [System.Serializable]
 public class maxDistance
 {
-    public string dis { get; set; }
+    public string easyDis;
+    public string hardDis;
 }

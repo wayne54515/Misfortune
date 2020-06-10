@@ -21,7 +21,7 @@ public class SaveAndLoad : MonoBehaviour
         Directory.CreateDirectory(filePath);//新增資料夾 filePath為資料夾路徑
     }
 
-    public void SaveData(string content)
+    public void SaveData(maxDistance content)
     {
         BinaryFormatter bf = new BinaryFormatter();
         string filePath = Application.dataPath + "/Save";
@@ -31,7 +31,7 @@ public class SaveAndLoad : MonoBehaviour
         bf.Serialize(s, content);
         s.Close();
     }
-    public string LoadData()
+    public object LoadData()
     {
         string filePath = Application.dataPath + "/Save";
         nameAndPath = filePath + "/" + savingFileName;//存檔的位置加檔名
@@ -40,13 +40,19 @@ public class SaveAndLoad : MonoBehaviour
         {
             BinaryFormatter bf = new BinaryFormatter();                                           
             Stream s = File.Open(nameAndPath, FileMode.Open);
-            string data = (string)bf.Deserialize(s);
+            maxDistance data = (maxDistance)bf.Deserialize(s);
             s.Close();
 
             return data;
         }
         else
-            return null;
+        {
+            maxDistance md = new maxDistance();
+            md.easyDis = "0";
+            md.hardDis = "0";
+            return md;
+        }
+            
         
     }
 }
